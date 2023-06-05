@@ -2,7 +2,7 @@
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/paypalme/rbtylee)
 
 This repository contains scripts to install Moksha and other Bodhi pacakges on various other distros.
-Use at your own risk and report problems/issue or suggestions to the author of whatever script you used.
+Use at your own risk and report problems/issue sor suggestions to the author of whatever script you used.
 
 # Contributing
 
