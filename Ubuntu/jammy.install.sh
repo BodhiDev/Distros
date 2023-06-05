@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # jammy.install.sh: 
-#    This script installs Bodhi Linux 7.x on an existing Ubuntu 20.04 install.
+#    This script installs Bodhi Linux 7.x on an existing Ubuntu 22.04 install.
 #    Review pkgs install in the sections
 #        ## Optional Software
 #        ## Optional Bodhi Packages
