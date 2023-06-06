@@ -23,7 +23,7 @@
 # along with this script; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-echo "This script will install Moksha on Ubuntu 20.04 (Jammy)."
+echo "This script will install Moksha on Ubuntu 22.04 (Jammy)."
 echo
 
 # Ensure user has sudo privileges
