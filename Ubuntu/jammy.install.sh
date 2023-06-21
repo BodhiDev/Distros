@@ -117,8 +117,8 @@ popd  &>/dev/null
 
 sudo apt update
 
-# Install moksha, default theme and other needed pkgs
-sudo apt  -y --no-install-recommends  install arandr bodhi-bins-default bodhi-quickstart  elaptopcheck moksha-menu moksha bodhi-theme-moksha-green
+# Install moksha, default themes and other needed pkgs
+sudo apt  -y --no-install-recommends  install arandr bodhi-bins-default bodhi-quickstart  elaptopcheck moksha-menu moksha bodhi-theme-moksha-green bodhi-theme-moksha-e17gtk
 sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
 
 ## Optional Software
