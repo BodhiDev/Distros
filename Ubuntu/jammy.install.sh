@@ -109,7 +109,7 @@ cd "$TEMP_DIR" || exit 1
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhilinux-keyring/bodhilinux-keyring_2022.11.07_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/u/ubuntu-system-adjustments/ubuntu-system-adjustments_0.0.1-1_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhi-info-moksha/bodhi-info-moksha_0.0.1-1_all.deb
-wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhi-settings/bodhi-settings_0.0.1-6_all.deb
+wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhi-settings/bodhi-settings_0.0.1-7_all.deb
 
 sudo apt -y --no-install-recommends install ./*.deb
 
