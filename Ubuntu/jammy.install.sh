@@ -132,10 +132,10 @@ sudo apt -y install bodhi-appcenter bodhi-icons bodhi-skel
 #  That is its sole purpose.
 sudo apt -y install bodhi-sankhara
 
-# apturl is needed to support our online center
+# apturl is needed to support our online AppCenter
 if which apturl; then
   echo "Ubuntu's apturl is installed."
-  echo "Not installs Bodhi's"
+  echo "Not installing Bodhi's"
 else
   echo "Installing Bodhi's apturl"
   sudo apt -y install apturl-saf
