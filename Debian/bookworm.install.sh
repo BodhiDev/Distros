@@ -51,7 +51,7 @@ if [ ! -f /etc/debian_version ]; then
 fi
 
 # Test to see if bookworm
-if [ ! -f os-release ]; then
+if [ ! -f /etc/os-release ]; then
     echo "os-release file not found!"
     echo "Unsupported Distro."
     echo "Install aborted!!"
