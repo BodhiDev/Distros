@@ -110,7 +110,7 @@ function cleanup {
 # ensure cleanup function is called on EXIT
 trap cleanup EXIT
 
-# Install bodhi keyring and bodhi-settings
+# Install bodhi keyring and misc settings
 
 pushd "$PWD"  &>/dev/null
 cd "$TEMP_DIR" || exit 1
@@ -118,12 +118,13 @@ cd "$TEMP_DIR" || exit 1
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhilinux-keyring/bodhilinux-keyring_2022.11.07_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b7debbie/d/debian-system-adjustments/debian-system-adjustments_2023.12.02_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhi-info-moksha/bodhi-info-moksha_0.0.1-1_all.deb
-wget http://packages.bodhilinux.com/bodhi/pool/b7debbie/b/bodhi-settings/bodhi-settings_0.0.1-12_all.deb
 
 sudo apt -y --no-install-recommends install ./*.deb
 
 popd  &>/dev/null
 
+# Add Bodhi repo and update
+echo "deb http://packages.bodhilinux.com/bodhi bookworm b7debbie" | sudo tee /etc/apt/sources.list.d/bodhi-repo.list > /dev/null
 sudo apt update
 
 # Install moksha, default themes and other needed pkgs
@@ -131,7 +132,7 @@ sudo apt  -y --no-install-recommends  install arandr bodhi-bins-default bodhi-qu
 sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
 
 ## Optional Software
-sudo apt -y install synaptic terminology ephoto-bl leafpad bodhi-chromium thunar-bl xdg-user-dirs policykit-1-gnome
+sudo apt -y install synaptic terminology ephoto-bl leafpad thunar-bl xdg-user-dirs policykit-1-gnome
 
 ## Optional Bodhi Packages
 sudo apt -y install bodhi-appcenter bodhi-icons bodhi-skel
