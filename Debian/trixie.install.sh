@@ -136,7 +136,7 @@ sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
 sudo apt  -y --no-install-recommends  install bodhi-theme-moksha-zenithal
 
 ## Optional Software
-sudo apt -y install synaptic xdg-user-dirs  ephoto-bl lxqt-policykit
+sudo apt -y install synaptic xdg-user-dirs  ephoto-bl
 # sudo apt -y install terminology
 # sudo apt -y install leafpad
 
