@@ -51,7 +51,7 @@ if [ ! -f /etc/debian_version ]; then
     exit 3
 fi
 
-# Test to see if bookworm
+# Test to see if trixie
 if [ ! -f /etc/os-release ]; then
     echo "os-release file not found!"
     echo "Unsupported Distro."
