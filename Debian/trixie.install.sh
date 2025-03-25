@@ -109,7 +109,7 @@ function cleanup {
 # ensure cleanup function is called on EXIT
 trap cleanup EXIT
 
-# Install bodhi keyring and misc settings
+# Install bodhi keyring, apt sources, and misc settings
 
 pushd "$PWD"  &>/dev/null
 cd "$TEMP_DIR" || exit 1
@@ -117,13 +117,13 @@ cd "$TEMP_DIR" || exit 1
 wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhilinux-keyring/bodhilinux-keyring_2022.11.07_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b7debbie/d/debian-system-adjustments/debian-system-adjustments_2025.12.02_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhi-info-moksha/bodhi-info-moksha_0.0.1-1_all.deb
+wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhi-apt-source/bodhi-apt-source_0.0.1-1_all.deb
 
 sudo apt -y --no-install-recommends install ./*.deb
 
 popd  &>/dev/null
 
-# Add Bodhi repo and update
-echo "deb http://packages.bodhilinux.com/bodhi lila b8debbie" | sudo tee /etc/apt/sources.list.d/bodhi-repo.list > /dev/null
+# Update
 sudo apt update
 
 # Install moksha, default themes and other needed pkgs
