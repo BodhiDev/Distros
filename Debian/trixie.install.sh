@@ -33,7 +33,7 @@ if ! sudo -v; then
   exit 1
 fi
 
-# to do deal with cpu 32-bit or 64-bit
+# Ensure supported CPU Architecture
 arch=$(uname -m)
 case "$arch" in
     x86_64) arch=64 ;;
@@ -151,4 +151,17 @@ else
   sudo apt -y install apturl-saf
 fi
 
-exit 0
+## With no DE installed initially on trixie
+##     zutty (a terminal) is installed but can not launche
+##     It is missing the below package
+sudo apt install xfonts-base
+
+## With no DE installed initially on trixie
+##     You may wish to consider installing a DM
+##      Uncomment below to install the DM and theme Bodhi uses
+
+# sudo apt install bodhi-slick-theme
+
+echo
+echo "If there were no errors Moksha was succesfully installed"
+
