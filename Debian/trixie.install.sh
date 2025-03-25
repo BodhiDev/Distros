@@ -37,7 +37,6 @@ fi
 arch=$(uname -m)
 case "$arch" in
     x86_64) arch=64 ;;
-    i686) arch=32 ;;
     * ) echo "Unsupported CPU Architecture"
         echo "Install aborted!!"
         exit 2;;
