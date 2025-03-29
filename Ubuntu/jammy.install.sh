@@ -104,7 +104,7 @@ trap cleanup EXIT
 
 # Install bodhi keyring and bodhi-settings
 
-pushd "$PWD"  &>/dev/null
+pushd "$PWD"  &>/dev/null || exit
 cd "$TEMP_DIR" || exit 1
 
 wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhilinux-keyring/bodhilinux-keyring_2022.11.07_all.deb
@@ -114,7 +114,7 @@ wget http://packages.bodhilinux.com/bodhi/pool/b7main/b/bodhi-settings/bodhi-set
 
 sudo apt -y --no-install-recommends install ./*.deb
 
-popd  &>/dev/null
+popd  &>/dev/null || exit
 
 sudo apt update
 
