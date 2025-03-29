@@ -103,6 +103,7 @@ if ! [[ "$TEMP_DIR" ]]; then
 fi
 
 # deletes the temp directory
+# shellcheck disable=SC2317
 function cleanup {
   rm -rf "$TEMP_DIR"
   echo "Deleted temp working directory $TEMP_DIR"
