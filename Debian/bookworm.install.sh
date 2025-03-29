@@ -59,6 +59,7 @@ if [ ! -f /etc/os-release ]; then
     exit 3
 fi
 
+# shellcheck disable=SC1091
 . /etc/os-release
 
 if [[ "$VERSION_ID" != "12" ]]; then
