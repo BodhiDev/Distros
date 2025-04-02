@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# bookworm.install.sh: 
+# trixie.install.sh: 
 #    This script installs Bodhi Linux 8.x on an existing Debian 13 install.
 #    Review pkgs install in the sections
 #        ## Optional Software
