@@ -235,6 +235,48 @@ cd ..
 ## To make debugging a bit easier (Optional but recommended)
 sudo apt install moksha-debug
 
+# Compile ephoto
+git clone https://github.com/rbtylee/ephoto
+cd ephoto
+meson . build
+ninja -C build
+sudo ninja -C build install
+cd ..
+
+# Compile terminology
+
+git clone https://git.enlightenment.org/enlightenment/terminology
+cd terminology
+meson . build
+ninja -C build
+sudo ninja -C build install
+cd ..
+
+# Compile some utilies
+
+## set-background-bodhi
+wget https://raw.githubusercontent.com/BodhiDev/bodhi8packages/refs/heads/main/bodhi/bodhi-bins-default/trixie/usr/bin/set-background-bodhi
+chmod +x set-background-bodhi
+sudo mv set-background-bodhi /usr/bin
+
+## evas-image-dim
+wget https://gist.githubusercontent.com/rbtylee/d8c156b97144dcc57fede8524864e692/raw/2de74f26e4e065d2caa8a8ea88e7e3372ca69732/evas-image-dim
+
+gcc -o evas-image-dim evas-image-dim.c `pkg-config --libs --cflags evas ecore ecore-evas`
+sudo mv evas-image-dim /usr/bin
+rm evas-image-dim.c
+
+## elf-version
+git clone https://github.com/BodhiDev/Moksha-dev
+cd Moksha-dev/elf-version/
+meson . build
+ninja -C build
+sudo ninja -C build install
+cd ../..
+rm -rf Moksha-dev
+
+cd ..
+
 # Install bodhi keyring, apt sources, and misc settings
 
 pushd "$PWD"  &>/dev/null || exit
@@ -283,5 +325,5 @@ fi
 # sudo apt install bodhi-slick-theme
 
 echo
-echo "If there were no errors Moksha was succesfully installed"
+echo "If there were no errors everything was succesfully installed"
 
