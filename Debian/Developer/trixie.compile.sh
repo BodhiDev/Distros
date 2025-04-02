@@ -232,6 +232,9 @@ make
 sudo make all install
 cd ..
 
+## To make debugging a bit easier (Optional but recommended)
+sudo apt install moksha-debug
+
 # Install bodhi keyring, apt sources, and misc settings
 
 pushd "$PWD"  &>/dev/null || exit
