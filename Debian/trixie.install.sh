@@ -116,9 +116,9 @@ pushd "$PWD"  &>/dev/null || exit
 cd "$TEMP_DIR" || exit 1
 
 wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhilinux-keyring/bodhilinux-keyring_2022.11.07_all.deb
-wget http://packages.bodhilinux.com/bodhi/pool/b7debbie/d/debian-system-adjustments/debian-system-adjustments_2025.12.02_all.deb
+wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/d/debian-system-adjustments/debian-system-adjustments_2025.12.02_all.deb
 wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhi-info-moksha/bodhi-info-moksha_0.0.1-1_all.deb
-wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhi-apt-source/bodhi-apt-source_0.0.1-1_all.deb
+wget http://packages.bodhilinux.com/bodhi/pool/b8debbie/b/bodhi-apt-source/bodhi-apt-source_0.0.1-2_all.deb
 
 sudo apt -y --no-install-recommends install ./*.deb
 
