@@ -304,7 +304,7 @@ sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
 sudo apt  -y --no-install-recommends  install bodhi-theme-moksha-zenithal
 
 ## Optional Software
-sudo apt -y install synaptic xdg-user-dirs lxpolkit mousepad chromium
+sudo apt -y install synaptic xdg-user-dirs lxpolkit mousepad chromium thunar
 # sudo apt -y install leafpad
 
 ## Optional Bodhi Packages
