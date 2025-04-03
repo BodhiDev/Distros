@@ -232,9 +232,6 @@ make
 sudo make all install
 cd ..
 
-## To make debugging a bit easier (Optional but recommended)
-sudo  apt -y install moksha-debug
-
 # Compile ephoto
 git clone https://github.com/rbtylee/ephoto
 cd ephoto
@@ -294,9 +291,12 @@ popd  &>/dev/null || exit
 # Update
 sudo apt update
 
+## To make debugging a bit easier (Optional but recommended)
+sudo  apt -y install moksha-debug
+
 # Install moksha, default themes and other needed pkgs
 # Note: moksha-green theme is needed for now as it is the default moksha theme
-sudo apt  -y --no-install-recommends  install arandr bodhi-quickstart  bodhi-startup moksha-menu moksha bodhi-theme-moksha-green bodhi-theme-moksha-e17gtk
+sudo apt  -y --no-install-recommends  install arandr bodhi-quickstart  bodhi-startup moksha-menu bodhi-theme-moksha-green bodhi-theme-moksha-e17gtk
 sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
 
 # Install BL8 default theme
