@@ -196,10 +196,10 @@ sudo apt -y install libavif-dev \
 	 x11proto-xext-dev \
 	 zlib1g-dev
 
-mkdir Code/
-cd Code/
+mkdir Code/ || exit
+cd Code/ || exit
 git clone https://git.enlightenment.org/enlightenment/efl/
-cd efl
+cd efl || exit
 
 # Apply Bodhi's patch to eliminate a lot of EFL noise in stdout/stderr
 wget https://raw.githubusercontent.com/BodhiDev/bodhi8packages/refs/heads/main/efl/trixie/debian/patches/50_silence_efl_bodhi.diff
@@ -226,7 +226,7 @@ cd ..
 # Compile Moksha
 sudo  apt -y install libasound2-dev  libxext-dev libpam0g-dev libxcb-shape0-dev dbus-x11 libxcb-keysyms1-dev libudisks2-dev 
 git clone https://github.com/JeffHoogland/moksha
-cd moksha/
+cd moksha/ || exit
 ./autogen.sh --prefix=/usr
 make
 sudo make all install
@@ -234,7 +234,7 @@ cd ..
 
 # Compile ephoto
 git clone https://github.com/rbtylee/ephoto
-cd ephoto
+cd ephoto || exit
 meson . build
 ninja -C build
 sudo ninja -C build install
@@ -243,7 +243,7 @@ cd ..
 # Compile terminology
 
 git clone https://git.enlightenment.org/enlightenment/terminology
-cd terminology
+cd terminology || exit
 meson . build
 ninja -C build
 sudo ninja -C build install
@@ -265,7 +265,7 @@ rm evas-image-dim.c
 
 ## elf-version
 git clone https://github.com/BodhiDev/Moksha-dev
-cd Moksha-dev/elf-version/
+cd Moksha-dev/elf-version/ || exit
 meson . build
 ninja -C build
 sudo ninja -C build install
