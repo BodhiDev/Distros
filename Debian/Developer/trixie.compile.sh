@@ -125,10 +125,10 @@ sudo apt -y install openssh-server gdb gdbserver xserver-xephyr valgrind
 ## With no DE installed initially on trixie
 ##     zutty (a terminal) is installed but can not launch
 ##     It is missing the below package
-sudo apt install xfonts-base
+sudo apt -y install xfonts-base
 
 # Install EFL dependencies
- sudo apt install libavif-dev \
+sudo apt -y install libavif-dev \
 	 libblkid-dev \
 	 libssl-dev \
 	 libcurl4-openssl-dev \
@@ -224,7 +224,7 @@ sudo ninja -C build install
 cd ..
 
 # Compile Moksha
-sudo apt install libasound2-dev  libxext-dev libpam0g-dev libxcb-shape0-dev dbus-x11 libxcb-keysyms1-dev libudisks2-dev 
+sudo  apt -y install libasound2-dev  libxext-dev libpam0g-dev libxcb-shape0-dev dbus-x11 libxcb-keysyms1-dev libudisks2-dev 
 git clone https://github.com/JeffHoogland/moksha
 cd moksha/
 ./autogen.sh --prefix=/usr
@@ -233,7 +233,7 @@ sudo make all install
 cd ..
 
 ## To make debugging a bit easier (Optional but recommended)
-sudo apt install moksha-debug
+sudo  apt -y install moksha-debug
 
 # Compile ephoto
 git clone https://github.com/rbtylee/ephoto
@@ -322,7 +322,7 @@ fi
 ##     You may wish to consider installing a DM
 ##      Uncomment below to install the DM and theme Bodhi uses
 
-# sudo apt install bodhi-slick-theme
+# sudo  apt -y install bodhi-slick-theme
 
 echo
 echo "If there were no errors everything was succesfully installed"
