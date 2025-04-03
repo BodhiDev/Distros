@@ -206,7 +206,7 @@ wget https://raw.githubusercontent.com/BodhiDev/bodhi8packages/refs/heads/main/e
 patch -p1 < 50_silence_efl_bodhi.diff
 
 # Build EFL
-meson --prefix=/usr -Dtslib=false \
+meson setup build --prefix=/usr -Dtslib=false \
 		-Dembedded-lz4=false \
 		-Dnetwork-backend=none \
 		-Dwl=false \
@@ -217,7 +217,7 @@ meson --prefix=/usr -Dtslib=false \
 		-Devas-loaders-disabler="['json']" \
 		-Dopengl=full \
          -Dfb=true \
-		-Delua=true -Dbindings="['lua', 'cxx']" . build
+		-Delua=true -Dbindings="['lua', 'cxx']"
 
 ninja -C build
 sudo ninja -C build install
@@ -235,7 +235,7 @@ cd ..
 # Compile ephoto
 git clone https://github.com/rbtylee/ephoto
 cd ephoto || exit
-meson . build
+meson setup build
 ninja -C build
 sudo ninja -C build install
 cd ..
@@ -244,7 +244,7 @@ cd ..
 
 git clone https://git.enlightenment.org/enlightenment/terminology
 cd terminology || exit
-meson . build
+meson setup build
 ninja -C build
 sudo ninja -C build install
 cd ..
@@ -267,7 +267,7 @@ rm evas-image-dim.c
 ## elf-version
 git clone https://github.com/BodhiDev/Moksha-dev
 cd Moksha-dev/elf-version/ || exit
-meson . build
+meson setup build
 ninja -C build
 sudo ninja -C build install
 cd ../..
