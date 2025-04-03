@@ -259,7 +259,8 @@ sudo mv set-background-bodhi /usr/bin
 ## evas-image-dim
 wget https://gist.githubusercontent.com/rbtylee/d8c156b97144dcc57fede8524864e692/raw/2de74f26e4e065d2caa8a8ea88e7e3372ca69732/evas-image-dim
 mv evas-image-dim evas-image-dim.c
-gcc -o evas-image-dim evas-image-dim.c "$(pkg-config --libs --cflags evas ecore ecore-evas)"
+read -ra pkg_flags < <(pkg-config --libs --cflags evas ecore ecore-evas)
+gcc -o evas-image-dim evas-image-dim.c "${pkg_flags[@]}"
 sudo mv evas-image-dim /usr/bin
 rm evas-image-dim.c
 
