@@ -128,7 +128,7 @@ sudo  apt -y install wget git
 sudo  apt -y install build-essential check cmake meson pkg-config
 
 # Install tools for debugging (Edit as needed)
-sudo apt -y install openssh-server gdb gdbserver strace xserver-xephyr xwininfo valgrind
+sudo apt -y install openssh-server gdb gdbserver strace xserver-xephyr  x11-utils valgrind
 
 ## With no DE installed initially on trixie
 ##     zutty (a terminal) is installed but can not launch
