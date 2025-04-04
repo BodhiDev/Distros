@@ -138,7 +138,7 @@ sudo apt update
 # Install moksha, default themes and other needed pkgs
 # Note: moksha-green theme is needed for now as it is the default moksha theme
 sudo apt  -y --no-install-recommends  install arandr bodhi-bins-default bodhi-quickstart  bodhi-startup moksha-menu moksha bodhi-theme-moksha-green bodhi-theme-moksha-e17gtk
-sudo apt  -y install gtk-recent pavucontrol xclip bc udisks2
+sudo apt  -y install gtk-recent pavucontrol xsel bc udisks2
 
 # Install BL8 default theme
 sudo apt  -y --no-install-recommends  install bodhi-theme-moksha-zenithal
