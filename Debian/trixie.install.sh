@@ -75,6 +75,14 @@ if which enlightenment_remote; then
   exit 6
 fi
 
+# Ensure EFL is not already installed
+if which elementary_config; then
+  echo "Elementary a part of EFL is installed already."
+  echo "Please uninstall all EFL libraries."
+  echo "Install aborted!!"
+  exit 6
+fi
+
 echo
 read -r -p "Continue (y/n)? " choice
 echo
