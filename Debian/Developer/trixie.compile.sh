@@ -225,7 +225,7 @@ meson setup build --prefix=/usr -Dtslib=false \
 		-Ddocs=false \
 		-Devas-loaders-disabler="['json']" \
 		-Dopengl=full \
-         -Dfb=true \
+		-Dfb=true \
 		-Delua=true -Dbindings="['lua', 'cxx']"
 
 ninja -C build
