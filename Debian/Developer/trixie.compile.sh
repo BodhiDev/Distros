@@ -129,6 +129,7 @@ sudo  apt -y install build-essential check cmake meson pkg-config
 
 # Install tools for debugging (Edit as needed)
 sudo apt -y install openssh-server gdb gdbserver strace xserver-xephyr  x11-utils valgrind
+sudo apt -y install manpages-dev ltrace
 
 ## With no DE installed initially on trixie
 ##     zutty (a terminal) is installed but can not launch
