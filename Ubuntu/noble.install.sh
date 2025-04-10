@@ -135,7 +135,7 @@ sudo apt  -y install gtk-recent pavucontrol xsel bc udisks2
 sudo apt  -y --no-install-recommends  install bodhi-theme-moksha-zenithal
 
 ## Optional Software
-sudo apt -y install synaptic xdg-user-dirs  ephoto-bl lxpolkit
+sudo apt -y install synaptic xdg-user-dirs  ephoto-bl lxpolkit thunar
 # sudo apt -y install terminology
 # sudo apt -y install leafpad
 
@@ -151,6 +151,10 @@ else
   sudo apt -y install apturl-saf
 fi
 
+## With no DE installed initially on noble
+##     zutty (a terminal) is installed but can not launch
+##     It is missing the below package
+sudo apt install xfonts-base
 
 ## With no DE installed initially on noble
 ##     You may wish to consider installing a DM
