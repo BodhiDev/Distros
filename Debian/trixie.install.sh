@@ -161,7 +161,7 @@ else
 fi
 
 ## With no DE installed initially on trixie
-##     zutty (a terminal) is installed but can not launche
+##     zutty (a terminal) is installed but can not launch
 ##     It is missing the below package
 sudo apt install xfonts-base
 
